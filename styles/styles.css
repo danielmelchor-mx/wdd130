@@ -9,7 +9,7 @@ aside {
     margin: 1rem;
     padding: 1rem;
     border: 1px solid rgb(0, 0, 0);
-    background-color: #b1fff1;
+    background-color: #cffff7;
     color: #333;
     text-align: center;
 }
@@ -19,7 +19,7 @@ aside img {
 }
 
 nav {
-    background-color: #b1fff1;
+    background-color: #cffff7;
     padding: 1rem;
 }
 
