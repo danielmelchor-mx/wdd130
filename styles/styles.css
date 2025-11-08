@@ -5,9 +5,9 @@ aside {
     width: 20rem;
     margin: 1rem;
     padding: 1rem;
-    border: 1px solid rgb(0 0 0/0.2);
-    background-color: #eee;
-    color: aliceblue;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: #b5def8;
+    color: #333;
     text-align: center;
 }
 aside img {
