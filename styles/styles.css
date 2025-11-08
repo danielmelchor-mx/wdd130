@@ -15,6 +15,11 @@ aside img {
     height: auto;
 }
 
+nav {
+    background-color: #f9efef;
+    padding: 1rem;
+}
+
 main img {
     width: 150px;
     height: auto;
@@ -26,6 +31,6 @@ p {
 
 footer {
     text-align: center;
-    border-top: 1px solid #000);
+    border-top: 1px solid #000;
     margin-top: 15px;
 }
