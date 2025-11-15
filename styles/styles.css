@@ -58,9 +58,11 @@ aside .overlay {
     margin: 1rem;
     padding: 1rem;
     border: 1px solid #000;
-    background-color: #cffff7;
+    background-color: #affcf7;
     color: #333;
     border-radius: 6px;
+    width: fit-content;
+    display: inline-block;
 }
 footer {
     text-align: center;
