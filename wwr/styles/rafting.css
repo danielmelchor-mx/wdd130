@@ -97,6 +97,7 @@ section {
     margin: 40px auto;
     max-width: 900px;
     padding: 10px;
+    background-color: var(--accent);
 }
 
 section h2 {
@@ -126,6 +127,8 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 40px;
+    background-color: var(--secondary);
+    color: var(--text-light);
 }
 
 footer nav img {
