@@ -20,6 +20,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    background-color: var(--primary-color); /* USANDO PRIMARY */
+    color: white;
 }
 
 header img {
@@ -29,7 +31,8 @@ header img {
 nav a {
     margin-left: 20px;
     text-decoration: none;
-    color: #003344;
+    color: var(--accent-color); /* USANDO ACCENT */
+    font-family: var(--heading-font); /* USANDO HEADING FONT */
 }
 
 .hero {
@@ -47,6 +50,7 @@ nav a {
     left: 40%;
     color: white;
     font-size: 2.5rem;
+    font-family: var(--heading-font); /* USANDO HEADING FONT */
 }
 
 .hero article {
@@ -57,6 +61,7 @@ nav a {
     padding: 20px;
     width: 300px;
     color: white;
+    font-family: var(--body-font);
 }
 
 .hero article img {
@@ -78,6 +83,8 @@ section {
 footer {
     text-align: center;
     padding: 20px;
+    background-color: var(--primary-color); /* PRIMARY */
+    color: white;
 }
 
 footer nav a img {
