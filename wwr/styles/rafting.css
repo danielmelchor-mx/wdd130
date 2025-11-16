@@ -1,0 +1,86 @@
+:root {
+    --primary-color: #0a4a73;
+    --accent-color: #136f8a;
+    --heading-font: Arial Black, sans-serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header img {
+    width: 120px;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #003344;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    display: block;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.hero article {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    width: 300px;
+    color: white;
+}
+
+.hero article img {
+    float: right;
+    width: 120px;
+    margin-left: 10px;
+}
+
+section {
+    width: 80%;
+    margin: 40px auto;
+}
+
+.adventures img {
+    width: 160px;
+    margin: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+footer nav a img {
+    width: 40px;
+    margin: 10px;
+}
