@@ -11,7 +11,6 @@
     --body-font: "Raleway", sans-serif;
 }
 
-/* --- Base Styles --- */
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +23,6 @@ body {
     color: var(--text-dark);
 }
 
-/* --- Header & Navigation (Reused) --- */
 header {
     display: grid;
     grid-template-columns: 150px auto;
@@ -58,7 +56,6 @@ header nav a:hover {
     color: var(--secondary);
 }
 
-/* --- About Page Hero & Sections (Reused) --- */
 .hero {
     position: relative;
     max-width: 1100px;
@@ -149,7 +146,6 @@ section h2 {
     font-size: 0.9rem;
 }
 
-/* --- Footer (Reused) --- */
 footer {
     background-color: var(--secondary);
     color: var(--text-light);
@@ -170,14 +166,9 @@ footer nav img {
     width: 35px;
 }
 
-/* ---------------------------------------------------------------------- */
-/* --- New Styles for contact.html (Contact Us Page) --- */
-/* ---------------------------------------------------------------------- */
 
-/* Main Grid Layout for Contact Page (Wireframe layout) */
 .contact-grid-layout {
     display: grid;
-    /* Create two columns: one for info/map/employees (1.5fr), one for the form (1fr) */
     grid-template-columns: 1.5fr 1fr; 
     gap: 40px;
     padding: 20px;
@@ -193,7 +184,6 @@ footer nav img {
     padding-bottom: 15px;
 }
 
-/* Company Info & Map (Left Side) */
 .company-info-container {
     display: flex;
     flex-direction: column;
@@ -216,16 +206,14 @@ footer nav img {
 }
 
 .map-container iframe {
-    /* REMOVED style="border:0" from HTML, adding border here */
     width: 100%;
     height: 350px;
-    border: 3px solid var(--secondary); /* Styled border for map */
+    border: 3px solid var(--secondary); 
     border-radius: 4px;
 }
 
-/* Employee Profiles (Below Info/Map) */
 .employee-profiles-container {
-    grid-column: 1 / span 1; /* Keep it in the left column */
+    grid-column: 1 / span 1; 
     padding: 20px;
     background-color: var(--accent);
     border-radius: 4px;
@@ -247,7 +235,7 @@ footer nav img {
     width: 100%;
     height: auto;
     max-width: 150px;
-    border-radius: 50%; /* Circular profile images */
+    border-radius: 50%; 
     object-fit: cover;
     border: 4px solid var(--primary);
     margin-bottom: 8px;
@@ -260,9 +248,8 @@ footer nav img {
 }
 
 
-/* Contact Form (Right Side) */
 .contact-form-container {
-    grid-column: 2 / 3; /* Right column */
+    grid-column: 2 / 3; 
     padding: 20px;
     background-color: var(--primary);
     color: var(--text-light);
@@ -294,7 +281,6 @@ footer nav img {
     color: var(--accent);
 }
 
-/* Text Inputs and Textarea */
 .contact-form-container label:not([for="newsletter"]):not([for^="inquiry"]) {
     display: block;
     margin-bottom: 5px;
@@ -310,10 +296,9 @@ footer nav img {
     border: 1px solid var(--secondary);
     border-radius: 4px;
     box-sizing: border-box;
-    color: var(--text-dark); /* Ensure text is readable against the primary background */
+    color: var(--text-dark); 
 }
 
-/* Radio Button Group */
 .radio-options label {
     display: inline-block;
     margin-right: 15px;
@@ -324,7 +309,6 @@ footer nav img {
     margin-right: 5px;
 }
 
-/* Checkbox Group */
 .checkbox-group {
     margin-top: 15px;
 }
@@ -333,7 +317,6 @@ footer nav img {
     display: inline;
 }
 
-/* Submission Button */
 .submit-button {
     background-color: var(--call-to-action); 
     color: white;
@@ -349,31 +332,25 @@ footer nav img {
 }
 
 .submit-button:hover {
-    background-color: #3e8e41; /* Darker green */
+    background-color: #3e8e41; 
 }
 
 
-/* ---------------------------------------------------------------------- */
-/* --- Media Query for Responsiveness --- */
-/* ---------------------------------------------------------------------- */
-
+/*addaptive for smaller screens*/
 @media (max-width: 900px) {
-    /* Stack the columns on smaller screens */
     .contact-grid-layout {
-        grid-template-columns: 1fr; /* Single column */
+        grid-template-columns: 1fr; 
         gap: 25px;
         padding: 15px;
         margin-top: 20px;
     }
 
-    /* All sections now span the single column */
     .company-info-container,
     .contact-form-container,
     .employee-profiles-container {
         grid-column: 1 / 1;
     }
 
-    /* Stack employee photos vertically or two per row */
     .employee-grid {
         flex-direction: column;
         align-items: center;
