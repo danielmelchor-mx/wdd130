@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Contact Us | Splash White Water Rafting</title>
+    <meta name="description" content="Have questions about reservations, tours, or general inquiries? Contact our rafting team by phone, email, or use our convenient online form.">
+    <meta name="author" content="Daniel Melchor">
+    
+    <link rel="stylesheet" href="styles/rafting.css">
+    
+</head>
+
+<body>
+
+<header>
+    <img src="images/logo.png" alt="Splash White Water Rafting Logo">
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="trips.html">Trips</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+</header>
+
+<main class="contact-grid-layout">
+    
+    <h1>Contact Our Team</h1>
+    
+    <section class="company-info-container">
+        <div class="contact-details">
+            <h2>Our Contact Information</h2>
+            <p><strong>Address:</strong> 123 River Road, Rafting City, USA 84340</p>
+            <p><strong>Reservations:</strong> (555) 123-RAFT</p>
+            <p><strong>General Inquiries:</strong> (555) 987-HELP</p>
+            <p><strong>Email:</strong> <a href="mailto:info@splashrafting.com">info@splashrafting.com</a></p>
+        </div>
+        
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.678901234567!2d-111.000000!3d43.000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDAwJzAwLjAiTiAxMTDCsDAwJzAwLjAiVw!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+                width="600" 
+                height="450" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            
+        </div>
+    </section>
+
+    <section class="employee-profiles-container">
+        <h2>Meet Our Guides</h2>
+        <div class="employee-grid">
+            <figure>
+                <img src="images/employee1.jpg" alt="Photo of Employee Alex, Lead Guide">
+                <figcaption><strong>Alex Johnson</strong><br>Lead Guide & Safety Coordinator</figcaption>
+            </figure>
+            <figure>
+                <img src="images/employee2.jpg" alt="Photo of Employee Sarah, Reservations Manager">
+                <figcaption><strong>Sarah Chen</strong><br>Reservations Manager</figcaption>
+            </figure>
+            <figure>
+                <img src="images/employee3.jpg" alt="Photo of Employee Mike, Operations Director">
+                <figcaption><strong>Mike O'Connell</strong><br>Operations Director</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="contact-form-container">
+        <h2>Send Us a Message</h2>
+        <form action="submit-contact.php" method="post">
+            
+            <fieldset class="user-info-group">
+                <legend>Your Details</legend>
+                
+                <label for="user_name">Full Name:</label>
+                <input type="text" id="user_name" name="user_name" required>
+                
+                <label for="user_email">Email Address:</label>
+                <input type="email" id="user_email" name="user_email" required>
+            </fieldset>
+
+            <fieldset class="radio-group">
+                <legend>Purpose of Message:</legend>
+                
+                <div class="radio-options">
+                    <input type="radio" id="inquiry" name="message_purpose" value="general" required>
+                    <label for="inquiry">General Inquiry</label><br>
+                    
+                    <input type="radio" id="reservation" name="message_purpose" value="reservation">
+                    <label for="reservation">Reservation Question</label><br>
+                    
+                    <input type="radio" id="website" name="message_purpose" value="website">
+                    <label for="website">Website Suggestion</label>
+                </div>
+            </fieldset>
+
+            <fieldset class="message-group">
+                <legend>Your Message</legend>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="newsletter" name="newsletter" value="subscribe">
+                    <label for="newsletter">Please subscribe me to the monthly newsletter</label>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="submit-button">Send Message Now</button>
+            
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>©2025 Splash White Water Rafting | Daniel Melchor</p>
+
+    <nav class="socialmedia">
+        <a href="#"><img src="images/facebook.png" alt="Facebook social media icon"></a>
+        <a href="#"><img src="images/instagram.png" alt="Instagram social media icon"></a>
+        <a href="#"><img src="images/twitter.png" alt="Twitter social media icon"></a>
+    </nav>
+</footer>
+
+</body>
+</html>
