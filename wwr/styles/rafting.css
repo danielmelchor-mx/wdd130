@@ -181,7 +181,6 @@ section {
     font-weight: 600;
 }
 
-/* Home Page Grid Layout /
 .home-grid-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -212,9 +211,7 @@ section {
     color: var(--secondary);
 }
 
-/* --- TRIPS PAGE (trips.html) Styles --- */
 
-/* Hero para Trips */
 .trips-hero {
     background-color: var(--primary);
     color: var(--text-light);
@@ -477,63 +474,3 @@ footer nav img:hover {
 }
 
 
-@media (max-width: 900px) {
-    header {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    header nav {
-        flex-direction: column;
-        gap: 5px;
-        margin-top: 10px;
-    }
-    
-    /* Contact Page Stacked */
-    .contact-grid-layout {
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-            "title"
-            "info"
-            "map"
-            "form"
-            "guides"; 
-        gap: 25px;
-    }
-
-    .employee-grid {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-    }
-
-    .employee-grid figure {
-        width: 60%; 
-        max-width: 300px;
-    }
-
-    /* Home Page Stacked */
-    .home-grid-layout {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    /* Footer Stacked */
-    footer {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-
-    /* Trips Grid Stacked */
-    .trip-descriptions-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .newsletter-section form {
-        flex-direction: column;
-    }
-    
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-}
