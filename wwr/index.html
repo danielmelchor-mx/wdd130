@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | Splash White Water Rafting</title>
+    <meta name="description" content="Experimenta la aventura definitiva con Splash White Water Rafting. Desde ríos tranquilos hasta rápidos extremos. ¡Únete a la diversión hoy!">
+    <meta name="author" content="Daniel Melchor">
+    <link rel="stylesheet" href="styles/rafting.css">
+    <!-- Enlaces a fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.png" alt="Splash White Water Rafting Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Requisito: Large full-width 'hero' image with absolute positioned heading -->
+        <div class="hero">
+            <img src="images/hero-home.jpg" alt="Rafters navigating a whitewater river">
+            <h1>¡La Aventura Te Espera!</h1>
+            
+            <!-- Requisito: Call to action with link to trips.html -->
+            <a href="trips.html" class="cta-button call-to-action">¡Explora Nuestros Viajes!</a>
+        </div>
+
+        <!-- Requisito: Newsletter sign up form -->
+        <section class="newsletter-section">
+            <h2>¡Únete a la Corriente! Suscríbete a Nuestro Boletín</h2>
+            <form action="submit-newsletter.php" method="post">
+                <input type="text" id="name" name="name" placeholder="Nombre Completo" required>
+                <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+                <button type="submit">Suscribirse</button>
+            </form>
+        </section>
+
+        <!-- Requisito: CSS grid layout con al menos dos imágenes y contenido -->
+        <div class="home-grid-layout">
+            
+            <!-- Item 1: Propósito del sitio (Nuestros Ríos) -->
+            <div class="grid-item">
+                <img src="images/home-section1.jpg" alt="Drone view of a pristine river">
+                <h3>Nuestros Ríos Legendarios</h3>
+                <p>Ofrecemos viajes en los ríos más emocionantes de la región, desde el caudaloso Río Bravo hasta las aguas cristalinas del Arroyo Secreto. Cada viaje es una oportunidad única para conectar con la naturaleza salvaje y experimentar la adrenalina pura.</p>
+                <a href="about.html" class="cta-button" style="margin-top: 15px;">Conoce Nuestra Historia</a>
+            </div>
+
+            <!-- Item 2: Oferta (Seguridad y Equipo) -->
+            <div class="grid-item">
+                <img src="images/home-section2.jpg" alt="Rafting guides preparing equipment">
+                <h3>Equipo de Primera y Guías Expertos</h3>
+                <p>Tu seguridad es nuestra prioridad. Solo utilizamos balsas y equipo de seguridad certificados de la más alta calidad. Todos nuestros guías están certificados en primeros auxilios y tienen años de experiencia navegando estos rápidos. ¡Prepárate para la mejor experiencia en el agua!</p>
+                <a href="trips.html" class="cta-button" style="margin-top: 15px;">Ver Opciones de Viaje</a>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer>
+        <p>©2025 Splash White Water Rafting | Daniel Melchor</p>
+        <nav class="socialmedia">
+            <a href="#"><img src="images/facebook.png" alt="Facebook social media icon"></a>
+            <a href="#"><img src="images/instagram.png" alt="Instagram social media icon"></a>
+            <a href="#"><img src="images/twitter.png" alt="Twitter social media icon"></a>
+        </nav>
+    </footer>
+</body>
+</html>

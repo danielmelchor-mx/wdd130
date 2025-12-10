@@ -1,8 +1,10 @@
 /* --- Global Variables --- */
 :root {
-    --primary: #0a3a67;
-    --secondary: #133b7c;
-    --accent: #f2f2f2;
+
+    --primary: #0a3a67; 
+    --secondary: #133b7c; 
+    --accent: #f2f2f2; 
+
     --call-to-action: #2E7D32; 
     --text-light: #ffffff;
     --text-dark: #222222;
@@ -11,6 +13,7 @@
     --body-font: "Raleway", sans-serif;
 }
 
+/* --- Base Styles --- */
 * {
     margin: 0;
     padding: 0;
@@ -23,6 +26,12 @@ body {
     color: var(--text-dark);
 }
 
+h1, h2, h3, h4 {
+    font-family: var(--heading-font);
+    color: var(--primary);
+}
+
+/* --- Header & Navigation --- */
 header {
     display: grid;
     grid-template-columns: 150px auto;
@@ -31,6 +40,7 @@ header {
     background-color: var(--accent);
     max-width: 1100px;
     margin: 0 auto;
+    border-bottom: 2px solid var(--primary);
 }
 
 header img {
@@ -50,11 +60,49 @@ header nav a {
     color: var(--primary);
     font-weight: 600;
     text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
 header nav a:hover {
-    color: var(--secondary);
+    background-color: var(--primary);
+    color: var(--text-light);
 }
+
+/* --- Main Content Layout --- */
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+section {
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--call-to-action); 
+    color: var(--text-light);
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: #1B5E20; 
+    transform: translateY(-2px);
+}
+
+/* --- HOME PAGE--- */
 
 .hero {
     position: relative;
@@ -64,117 +112,202 @@ header nav a:hover {
 
 .hero img {
     width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
+    display: block;
 }
 
 .hero h1 {
     position: absolute;
-    top: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(10, 58, 103, 0.7);
+    color: white;
+    font-size: 2.5rem;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.hero .call-to-action {
+    position: absolute;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(10, 58, 103, 0.85);
-    color: white;
-    font-family: var(--heading-font);
-    padding: 10px 40px;
-    border-radius: 4px;
+    z-index: 10;
 }
 
-.hero article {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: rgba(10, 58, 103, 0.85);
-    color: white;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-}
-
-.hero article img {
-    width: 120px;
-    margin-left: 15px;
-    border-radius: 5px;
-}
-
-section {
-    max-width: 1100px;
-    margin: 40px auto;
-    background-color: var(--accent);
-    padding: 20px;
-    border-radius: 4px;
-}
-
-section h2 {
-    background-color: var(--primary);
-    color: white;
+/* Newsletter/Subscription Section */
+.newsletter-section {
+    background-color: var(--secondary);
+    color: var(--text-light);
     text-align: center;
-    padding: 12px;
+    padding: 40px 20px;
+    border-radius: 8px;
+}
+
+.newsletter-section h2 {
+    color: var(--text-light);
     margin-bottom: 15px;
-    border-radius: 3px;
-    font-family: var(--heading-font);
 }
 
-.history-grid {
-    display: grid;
-    grid-template-columns: 1fr 350px 1fr;
-    gap: 20px;
-    align-items: center;
-}
-
-.history-grid img {
-    width: 100%;
-    border-radius: 4px;
-}
-
-.adventures {
+.newsletter-section form {
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: center;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 10px;
 }
 
-.adventures figure {
-    width: 18%;
+.newsletter-section input[type="text"],
+.newsletter-section input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    flex-grow: 1;
+    min-width: 150px;
+}
+
+.newsletter-section button[type="submit"] {
+    padding: 10px 20px;
+    background-color: var(--call-to-action);
+    color: var(--text-light);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Home Page Grid Layout /
+.home-grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 20px;
+    background-color: var(--accent);
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+.grid-item {
+    padding: 20px;
+    background-color: var(--text-light);
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.grid-item h3 {
+    margin-bottom: 10px;
+    color: var(--secondary);
+}
+
+/* --- TRIPS PAGE (trips.html) Styles --- */
+
+/* Hero para Trips */
+.trips-hero {
+    background-color: var(--primary);
+    color: var(--text-light);
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.trips-hero h1 {
+    color: var(--text-light);
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.trips-hero p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.trip-descriptions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.trip-card {
+    background-color: var(--accent);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     text-align: center;
 }
 
-.adventures img {
+.trip-card img {
     width: 100%;
+    height: 200px;
+    object-fit: cover;
     border-radius: 4px;
+    margin-bottom: 15px;
 }
 
-.adventures figcaption {
-    margin-top: 5px;
+.trip-card h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+
+.trips-table-container {
+    margin-top: 60px;
+    overflow-x: auto; /
+}
+
+.trips-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--text-light);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.trips-table th, .trips-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.trips-table th {
+    background-color: var(--secondary);
+    color: var(--text-light);
+    font-weight: 700;
+    text-transform: uppercase;
     font-size: 0.9rem;
 }
 
-footer {
-    background-color: var(--secondary);
-    color: var(--text-light);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    max-width: 1100px;
-    margin: 40px auto 0;
+.trips-table tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
-footer nav {
-    display: flex;
-    gap: 10px;
+.trips-table tr:hover {
+    background-color: #f0f0f0;
 }
 
-footer nav img {
-    width: 35px;
-}
+
+/* --- CONTACT PAGE (contact.html) Styles --- */
 
 .contact-grid-layout {
     display: grid;
     grid-template-columns: 1.5fr 1fr; 
-    
     grid-template-areas: 
-        "title title"   
-        "info form"     
-        "map form"      
-        "guides form";  
+        "title title"
+        "info form"
+        "map form"
+        "guides form";
 
     gap: 40px;
     padding: 20px;
@@ -183,37 +316,14 @@ footer nav img {
 }
 
 .contact-grid-layout h1 {
-    grid-area: title; 
+    grid-area: title;
     text-align: center;
     color: var(--primary);
-    font-family: var(--heading-font);
     padding-bottom: 15px;
 }
 
 .company-info-container {
     grid-area: info; 
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.map-container {
-    grid-area: map; 
-}
-
-.employee-profiles-container {
-    grid-area: guides; 
-    padding: 20px;
-    background-color: var(--accent);
-    border-radius: 4px;
-}
-
-.contact-form-container {
-    grid-area: form; 
-    padding: 20px;
-    background-color: var(--primary);
-    color: var(--text-light);
-    border-radius: 4px;
 }
 
 .contact-details {
@@ -222,13 +332,8 @@ footer nav img {
     border-radius: 4px;
 }
 
-.contact-details h2 {
-    background-color: var(--primary);
-    color: white;
-    text-align: center;
-    padding: 12px;
-    margin-bottom: 15px;
-    border-radius: 3px;
+.map-container {
+    grid-area: map;
 }
 
 .map-container iframe {
@@ -236,6 +341,22 @@ footer nav img {
     height: 350px;
     border: 3px solid var(--secondary); 
     border-radius: 4px;
+}
+
+.employee-profiles-container {
+    grid-area: guides;
+    padding: 20px;
+    background-color: var(--accent);
+    border-radius: 4px;
+}
+
+.employee-profiles-container h2 {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 3px;
 }
 
 .employee-grid {
@@ -260,23 +381,18 @@ footer nav img {
     margin-bottom: 8px;
 }
 
-.employee-grid figcaption {
-    font-size: 0.9rem;
-    font-style: italic;
-    color: var(--primary);
+.contact-form-container {
+    grid-area: form;
+    padding: 20px;
+    background-color: var(--primary);
+    color: var(--text-light);
+    border-radius: 8px;
 }
-
 
 .contact-form-container h2 {
     color: var(--text-light);
     background-color: var(--secondary);
     margin-top: 0;
-}
-
-.contact-form-container form {
-    display: grid;
-    gap: 15px;
-    padding-top: 10px;
 }
 
 .contact-form-container fieldset {
@@ -310,24 +426,6 @@ footer nav img {
     color: var(--text-dark); 
 }
 
-.radio-options label {
-    display: inline-block;
-    margin-right: 15px;
-    font-weight: 400;
-}
-
-.radio-options input[type="radio"] {
-    margin-right: 5px;
-}
-
-.checkbox-group {
-    margin-top: 15px;
-}
-
-.checkbox-group label {
-    display: inline;
-}
-
 .submit-button {
     background-color: var(--call-to-action); 
     color: white;
@@ -343,4 +441,99 @@ footer nav img {
 }
 
 .submit-button:hover {
-    background-color: #1B5E20; 
+    background-color: #1B5E20;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--secondary);
+    color: var(--text-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1100px;
+    margin: 40px auto 0;
+    border-top: 2px solid var(--primary);
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+footer nav {
+    display: flex;
+    gap: 10px;
+}
+
+footer nav img {
+    width: 35px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+footer nav img:hover {
+    opacity: 1;
+}
+
+
+@media (max-width: 900px) {
+    header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    header nav {
+        flex-direction: column;
+        gap: 5px;
+        margin-top: 10px;
+    }
+    
+    /* Contact Page Stacked */
+    .contact-grid-layout {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "title"
+            "info"
+            "map"
+            "form"
+            "guides"; 
+        gap: 25px;
+    }
+
+    .employee-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .employee-grid figure {
+        width: 60%; 
+        max-width: 300px;
+    }
+
+    /* Home Page Stacked */
+    .home-grid-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Footer Stacked */
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    /* Trips Grid Stacked */
+    .trip-descriptions-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .newsletter-section form {
+        flex-direction: column;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+}
